@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import SwipeableRow from "../components/SwipeableRow";
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
@@ -938,7 +939,7 @@ export default function Subscriptions() {
 						<div className="visually-hidden" aria-live="polite">
 							{isRefreshing ? t('subscriptions.refreshing', 'Refreshing subscriptions...') : ''}
 						</div>
-						
+
 						{/* Fallback Refresh Button for keyboard users and screen readers */}
 						<button 
 							className="ptr-fallback-btn"
